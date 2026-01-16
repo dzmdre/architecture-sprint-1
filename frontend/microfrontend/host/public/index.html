@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Microfrontends host" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <script type="systemjs-importmap">
+    {
+     "imports": {
+     "@app/auth": "%REACT_APP_AUTH_URL%",
+     "@app/profile": "%REACT_APP_PROFILE_URL%",
+     "@app/gallery": "%REACT_APP_GALLERY_URL%"
+     }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
+  <script src="/static/js/main.js"></script>
+  <title>Host</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+</body>
+</html>
